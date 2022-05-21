@@ -7,6 +7,41 @@
 </head>
 
 <body>
-    <h1>hi</h1>
+    <div class="slider">
+        <div class="slides">
+             <input type="radio" name="rd" id="r1">
+             <input type="radio" name="rd" id="r2" >
+             <input type="radio" name="rd" id="r3">
+            <div class="slide f">
+                <img src="1.jpg">
+            </div>
+            <div class="slide s">
+                <img src="2.jpg">
+            </div>
+            <div class="slide t">
+                <img src="3.jpg">
+            </div>
+            <div class="auto">
+                <div class="auto1"></div>
+                <div class="auto2"></div>
+                <div class="auto3"></div>
+            </div>
+             </div>
+            <div class="manual">
+                <label for="r1"class="manuals"></label>
+                <label for="r2"class="manuals"></label>
+                <label for="r3"class="manuals"></label>
+            </div>
+    </div>
+    
+    <script>
+        var counter = 1;
+        setInterval(function(){ document.getElementById('r'+counter).checked=true;
+                    counter=counter+1;
+        if(counter>3){
+            counter=1;
+        }
+        },3000);
+    </script>
 </body>
 </html>
